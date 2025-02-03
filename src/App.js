@@ -76,8 +76,8 @@ function App() {
             style={{width: '100%'}}
           />
           <a
-            href={'data:text/calender;charset=utf-8,${encdoeURIComponent(icsData)}'}
-            download="calender.ics"
+            href={'data:text/calendar;charset=utf-8,${encodeURIComponent(icsData)}'}
+            download="calendar.ics"
             >
               Download ICS File
             </a>
