@@ -39,7 +39,7 @@ function App() {
       console.log("Response: ", response);
 
       if (!response.ok) {
-        throw new Error('Server Error: ${response.statusText}');
+        throw new Error(`Server Error: ${response.statusText}`);
       }
 
       const data=await response.text();
@@ -76,7 +76,7 @@ function App() {
             style={{width: '100%'}}
           />
           <a
-            href={'data:text/calendar;charset=utf-8,${encodeURIComponent(icsData)}'}
+            href={`data:text/calendar;charset=utf-8,${encodeURIComponent(icsData)}`}
             download="calendar.ics"
             >
               Download ICS File
